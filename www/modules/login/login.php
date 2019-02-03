@@ -3,7 +3,11 @@
 $title = "Вход на сайт";
 
 
-if ( isset($_POST['login'])) {
+if ( isset($_POST['email'])) {
+
+	 //print_r($_POST);
+   //echo "<br><br>";
+
 
 	if ( trim($_POST['email']) == '') {
 		$errors[] = ['title' => 'Введите Email' ];
@@ -23,7 +27,7 @@ if ( isset($_POST['login'])) {
 				$_SESSION['role'] = $user->role;
 				header("Location: " . HOST);
 				exit();
-				
+
 			} else {
 				$errors[] = ['title' => 'Пароль введен неверно' ];
 			}

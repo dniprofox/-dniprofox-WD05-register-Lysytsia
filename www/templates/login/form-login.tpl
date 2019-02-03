@@ -1,11 +1,11 @@
 <form id="loginForm" class="login-page-form" method="POST" action="<?=HOST?>login">
-	
+
 	<div class="login-page-form__header">Вход на сайт</div>
 
 	<?php 
-		// echo "<pre>";
-		// print_r($_POST);
-		// echo "</pre>";
+		echo "<pre>";
+		print_r($errors);
+		echo "</pre>";
 	 ?>
 
 	<?php require ROOT . "templates/_parts/_errors.tpl" ?>

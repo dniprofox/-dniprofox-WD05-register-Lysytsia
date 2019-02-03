@@ -5,14 +5,14 @@
 
 
 
-				
+	<!-- 			
 	<?php	
 
 		
 		// echo "<pre>";
-		// print_r($_POST);
+		// print_r($errors);
 		// echo "</pre>";
-	 ?>
+	 ?> -->
 
 	<?php require ROOT . "templates/_parts/_errors.tpl" ?>
 
