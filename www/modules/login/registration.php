@@ -4,7 +4,7 @@ $title = "Регистрация";
 
 
 // Если форма отправлена - то делаем регистрацию
-if ( isset($_POST['register'])) {
+if ( isset($_POST['email'])) {
 
 		//echo "<pre>";
 		//print_r($_POST);

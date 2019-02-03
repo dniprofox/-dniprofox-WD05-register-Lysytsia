@@ -215,7 +215,7 @@ a.badge-link {
   border-style: solid;
   border-radius: 22px;
   height: 2.75em;
-  color: #037EC6;
+  color: #075d8c;
   background: #FFF;
   cursor: pointer;
   text-decoration: none;
@@ -224,7 +224,7 @@ a.badge-link {
 .button:hover,
 .button:focus {
   border-color: #DDE8EE;
-  background-color: #DDE8EE;
+  background-color: #a5d5ef;
 }
 .button:active {
   border-color: #b4dff6;

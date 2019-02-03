@@ -1,4 +1,5 @@
 <form id="loginForm" class="login-page-form" method="POST" action="<?=HOST?>login">
+	
 	<div class="login-page-form__header">Вход на сайт</div>
 
 	<?php 
@@ -12,6 +13,8 @@
 	<div class="registration-page-form__row">
 		<div class="error hidden">Введите email</div>
 	</div>
+
+
 
 	<div class="login-page-form__row">
 		<input name="email" class="input" type="email" placeholder="E-mail" value="info@mail.com" />
@@ -33,8 +36,12 @@
 			<a class="login-page__links" href="<?=HOST?>lost-password">Забыл пароль</a>
 		</div>
 	</div>
-	<div class="login-page-form__footer">
-		<input name="login" type="hidden" value="login" />
-		<a class="button button--enter">Войти</a>
+
+<div class="login-page-form__footer">
+
+		<input type="submit" name="login" class="button button--enter" value="Войти">
+
+
 	</div>
+
 </form>

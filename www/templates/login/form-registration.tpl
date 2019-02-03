@@ -50,7 +50,7 @@
 	<div class="registration-page-form__footer">
 
 		
-		<input type="submit" name="register" class="button button--registration" value="Регистрация">
+		<input type="submit" name="register" class="button button--enter" value="Регистрация">
 	
 
 	</div>
