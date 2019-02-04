@@ -82,6 +82,7 @@ $(document).ready(function() {
 	});
 
 	// ----- check registration form ----- //
+	
 	$('.button--registration').on('click', function(e){
 		e.preventDefault();
 		input = $('.registration-page-form__row').children('input');
@@ -110,6 +111,7 @@ $(document).ready(function() {
 			// $('#registrationForm').unbind();
 			$('#registrationForm').submit();
 		}
+		
 	});
 
 	// ----- check lost password form ----- //

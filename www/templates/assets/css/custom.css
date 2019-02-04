@@ -28,6 +28,8 @@ input.button {
 
 .error-with-desc-bottom p:last-child {
 	margin-bottom: 0;
+	margin-left: 15px;
+	padding-top: 5px;
 }
 
 .hidden {

@@ -38,10 +38,13 @@
 	</div>
 
 <div class="login-page-form__footer">
+		
 
-		<input type="submit"  class="button button--enter" value="Войти">
-
+		<input name="login" type="hidden" value="login" />		
+		<a  class="button button--enter">
+		 Войти</a>
 
 	</div>
 
 </form>
+

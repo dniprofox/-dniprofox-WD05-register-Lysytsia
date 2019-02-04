@@ -1,5 +1,7 @@
 <?php 
+
 	foreach ($success as $item) {
+		
 		if ( count($item) == 1) {  ?>
 			
 			<!-- Однострочная ошибка -->

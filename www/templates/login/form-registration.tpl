@@ -48,13 +48,18 @@
 		<input name="password" class="input" type="password" placeholder="Пароль" value="123456" />
 	</div>
 
-	<div class="registration-page-form__footer">
 
 		
-		<input type="submit" name="register" class="button button--enter" value="Регистрация">
-	
+		<div class="registration-page-form__footer">
+
+				<input name="register" type="hidden" value="register" />		
+				<a name="register" class="button button--registration">
+				 Регистрация</a>
 
 	</div>
+	
+
+	
 	
 </form>
 
