@@ -4,11 +4,12 @@ $title = "Регистрация";
 
 
 // Если форма отправлена - то делаем регистрацию
+
 if ( isset($_POST['email'])) {
 
-		//echo "<pre>";
-		//print_r($_POST);
-		//echo "</pre>";
+		// echo "<pre>";
+		// print_r($_POST);
+		// echo "</pre>";
 
 	if ( trim($_POST['email']) == '' ) {
 

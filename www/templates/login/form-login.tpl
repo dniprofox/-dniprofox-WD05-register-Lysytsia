@@ -3,9 +3,9 @@
 	<div class="login-page-form__header">Вход на сайт</div>
 
 	<?php 
-		echo "<pre>";
-		print_r($errors);
-		echo "</pre>";
+		// echo "<pre>";
+		// print_r($errors);
+		// echo "</pre>";
 	 ?>
 
 	<?php require ROOT . "templates/_parts/_errors.tpl" ?>
@@ -39,7 +39,7 @@
 
 <div class="login-page-form__footer">
 
-		<input type="submit" name="login" class="button button--enter" value="Войти">
+		<input type="submit"  class="button button--enter" value="Войти">
 
 
 	</div>

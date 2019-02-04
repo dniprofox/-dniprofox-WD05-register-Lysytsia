@@ -5,14 +5,14 @@
 
 
 
-	<!-- 			
-	<?php	
+				
+  <!-- <?php	 
 
 		
-		// echo "<pre>";
-		// print_r($errors);
-		// echo "</pre>";
-	 ?> -->
+		echo "<pre>";
+		print_r($errors);
+		echo "</pre>"; 
+	 ?>   -->
 
 	<?php require ROOT . "templates/_parts/_errors.tpl" ?>
 
@@ -28,7 +28,8 @@
 
 		<div class="error-with-desc-bottom">
 			<div class="error-with-desc-text">
-				<div class="p">Используйте другой email, чтобы создать новый аккаун </div>
+				<div class="p">Используйте другой email,
+				 чтобы создать новый аккаунт </div>
 				<div class="p mt-15">Или воспользуйтесь
 
 					<a class="error-with-desc__link" href="#">восстановлением пароля</a> , чтобы войти на сайт.

@@ -2,6 +2,7 @@
 
 function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 
+
 	/* Чтение изображения */
 	$imagick = new Imagick($imagePath);
 	$width = $imagick->getImageWidth();

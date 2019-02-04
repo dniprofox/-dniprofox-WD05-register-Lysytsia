@@ -1,4 +1,5 @@
 <div class="container">
+	
 	<div class="row align-items-center mt-40">
 		<div class="col offset-md-1">
 			<div class="title-1 color">Профиль</div>
@@ -8,11 +9,15 @@
 		</div>
 	</div>
 	<div class="row offset-md-1">
-		<div class="col-md-auto">
-			<div class="avatar">
-			<?php if ( $_SESSION['logged_user']['avatar'] != "") { ?>
-			<img src="<?=HOST?>usercontent/avatar/<?=$currentUser->avatar?>" alt="<?=$currentUser->name?> <?=$currentUser->secondname?>" />
-			<?php } ?>
+			<div class="col-md-auto">
+				<div class="avatar">
+
+				<?php if ( $_SESSION['logged_user']['avatar'] != "") { ?>
+
+				<img src="<?=HOST?>usercontent/avatar/<?=$currentUser->avatar?>"
+				 alt="<?=$currentUser->name?> <?=$currentUser->secondname?>" />
+				 
+				<?php } ?>
 
 			</div>
 		</div>
@@ -29,7 +34,7 @@
 			</div>
 			<div class="user-info">
 				<div class="user-info__title">Страна, Город</div>
-				<div class="user-info__desc"><?=$currentUser->country?> <?=$currentUser->city?></div>
+				<div class="user-info__desc"><?=$currentUser->country?>, <?=$currentUser->city?></div>
 			</div>
 		</div>
 	</div>

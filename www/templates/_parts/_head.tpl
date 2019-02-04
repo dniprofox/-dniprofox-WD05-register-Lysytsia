@@ -1,15 +1,19 @@
 <!DOCTYPE html>
+
 <html lang="ru">
 
 <head>
 	<meta charset="UTF-8" />
 	<title>
+
 		<?php if ( @$title != '' ) {
 			echo "$title - " . SITE_NAME ;
 		} else {
 			echo SITE_NAME;
 		} ?>
+		
 	</title>
+
 	<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
 	<meta name="keywords" content="" />
 	<meta name="description" content="" />

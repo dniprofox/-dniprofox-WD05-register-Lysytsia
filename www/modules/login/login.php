@@ -5,8 +5,8 @@ $title = "Вход на сайт";
 
 if ( isset($_POST['email'])) {
 
-	 //print_r($_POST);
-   //echo "<br><br>";
+	 // print_r($_POST);
+  //  echo "<br><br>";
 
 
 	if ( trim($_POST['email']) == '') {
@@ -31,6 +31,9 @@ if ( isset($_POST['email'])) {
 			} else {
 				$errors[] = ['title' => 'Пароль введен неверно' ];
 			}
+		}  else {
+				$errors[] = ['title' => 'Введите верный email ' ];
+
 		}
 
 	}

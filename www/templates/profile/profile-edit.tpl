@@ -36,9 +36,12 @@
 						</label>
 					</div>
 				</div>
+
 				<div class="fieldset">
+
 					<div class="fieldset__title">Фотография</div>
 					<div class="comment-row">Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.</div>
+					
 					<div class="control-row">
 						<div class="file">
 							<label class="file__label">
@@ -67,7 +70,9 @@
 				</div>
 				<div class="row">
 					<div class="col-md-auto pr-10">
+
 						<input class="button button--save" type="submit" name="profile-update" value="Сохранить"/>
+
 					</div>
 					<div class="col-md-auto pl-10">
 						<a class="button" href="<?=HOST?>profile">Отмена</a>
