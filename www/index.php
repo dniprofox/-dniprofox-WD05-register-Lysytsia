@@ -1,11 +1,9 @@
 <?php 
 
-
 // Хост сайта
 define('HOST', 'http://' . $_SERVER['HTTP_HOST'] . '/');
 
 // Физический путь к корневой директории скрипта
-
 define('ROOT', dirname(__FILE__).'/');
 
 $errors = array();
@@ -14,7 +12,6 @@ $success = array();
 require ROOT . "config.php";
 require ROOT . "db.php";
 require ROOT . "libs/functions.php";
-
 session_start();
 
 /* ..........................................
@@ -38,7 +35,6 @@ switch ( $uri[0] ) {
 		break;
 
 	// ::::::::::::::::::: USERS :::::::::::::::::::
-		// маршруты для страницы регистрации
 
 	case 'login':
 		require ROOT . "modules/login/login.php";
@@ -68,15 +64,22 @@ switch ( $uri[0] ) {
 		include ROOT . "modules/profile/edit.php";
 		break;
 
-
-
+// ************Blog*************
 
 	case 'blog':
-		echo "Blog page";
-		echo "<br>";
-		echo "$uri[1]";
-		// print_r($uri[1]);
+		include ROOT . "modules/blog/index.php";
 		break;
+
+	case 'blog/post-new':
+		include ROOT . "modules/blog/post-new.php";
+		break;		
+
+	
+	// 	echo "Blog page";
+	// 	echo "<br>";
+	// 	echo "$uri[1]";
+	// 	// print_r($uri[1]);
+	// 	break;
 	
 	default:
 		echo "Main page / 404";

@@ -7,22 +7,29 @@
 					<a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году</p>
 			</div>
 			<div class="footer-nav">
+
 				<ul class="footer__nav-list">
+
 					<li class="footer__nav-item">
-						<a href="#">Главная</a>
+						<a href="<?=HOST?>">Главная</a>
 					</li>
+
 					<li class="footer__nav-item">
-						<a href="#">Обо мне</a>
+						<a href="<?=HOST?>about">Обо мне</a>
 					</li>
+
 					<li class="footer__nav-item">
-						<a href="#">Работы</a>
+						<a href="<?=HOST?>portfolio">Работы</a>
 					</li>
+
 					<li class="footer__nav-item">
-						<a href="#">Блог</a>
+						<a href="<?=HOST?>blog">Блог</a>
 					</li>
+
 					<li class="footer__nav-item">
-						<a href="#">Контакты</a>
+						<a href="<?=HOST?>contacts">Контакты</a>
 					</li>
+
 				</ul>
 			</div>
 			<div class="footer__icons">

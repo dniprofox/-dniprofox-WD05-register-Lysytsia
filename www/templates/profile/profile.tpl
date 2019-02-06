@@ -33,8 +33,8 @@
 				</div>
 			</div>
 			<div class="user-info">
-				<div class="user-info__title">Страна, Город</div>
-				<div class="user-info__desc"><?=$currentUser->country?>, <?=$currentUser->city?></div>
+				<div class="user-info__title">Страна Город</div>
+				<div class="user-info__desc"><?=$currentUser->country?> <?=$currentUser->city?></div>
 			</div>
 		</div>
 	</div>

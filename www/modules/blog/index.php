@@ -1,15 +1,17 @@
 <?php 
 
-$title = "Профиль пользователя";
+$title = "Блог-все записи";
 
+//выводим посты из БД в порядке убывания
 
-$currentUser = $_SESSION['logged_user'];
+$posts = R::find('posts', 'ORDER BY id DESC');
 
 
 // Готовим контент для центральной части
+
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/profile/profile.tpl";
+include ROOT . "templates/blog/blog-all-posts.tpl";
 $content = ob_get_contents();
 ob_end_clean();
 

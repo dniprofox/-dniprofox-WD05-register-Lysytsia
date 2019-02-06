@@ -3,11 +3,11 @@
 		<div class="col-xl-10 offset-1">
 			<div class="title-1 m-0 pt-60">Редактировать профиль</div>
 
-			<?php 
+			<!-- <?php 
 				// echo "<pre>";
 				// print_r($_POST);
 				// echo "</pre>";
-			 ?>
+			 ?> -->
 
 			<?php require ROOT . "templates/_parts/_errors.tpl" ?>
 
