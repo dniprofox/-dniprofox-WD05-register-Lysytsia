@@ -1,16 +1,12 @@
 <?php 
 
-
-
-$title = "Блог-все записи";
+// $title = "Блог-все записи";
 
 //выводим посты из БД в порядке убывания
 
-$posts = R::find('post', 'ORDER BY id DESC');
+// $posts = R::find('posts', 'ORDER BY id DESC');
 
-// echo "<pre>";
-// print_r($posts);
-// echo "</pre>";
+$post = R::findOne('posts', 'id = ?', array($_GET['id']) );
 
 
 
@@ -18,7 +14,7 @@ $posts = R::find('post', 'ORDER BY id DESC');
 
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/blog/blog-all-posts.tpl";
+include ROOT . "templates/blog/blog-post.tpl";
 $content = ob_get_contents();
 ob_end_clean();
 

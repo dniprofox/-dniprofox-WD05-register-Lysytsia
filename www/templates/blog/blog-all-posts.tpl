@@ -4,8 +4,8 @@
 // print_r($posts);
 // echo "</pre>";
 
- ?> -->
-
+ ?>  -->
+ 
 
 
 	<div class="main-wrapper">
@@ -21,29 +21,17 @@
 				</div>
 			</div>
 
+
 			<div class="row pb-35">
+						
+				<?php
 
-				<?php foreach ($post as $posts) { ?>
+				foreach ($posts as $post) { 
+						include ROOT . "templates/_parts/_blog-card.tpl";					
 
-						<div class="col-4">
-						<div class="section-ui">
-						<div class="card card-post">
+					}
 
-							<img class="card-post__img" src="<?=HOST?>/usercontent/blog/
-							<?=$post->post_img_small?>" alt="<?=$post->title?>" />
-							<div class="title-4"><?=$post->title?></div>
-							
-							<a class="button" href="#">Читать</a>
-						</div>
-					</div>
-				</div>
-
-
-			<?php	} ?>			 
-
-
-				
-
+			 ?>	
 			
 			</div>
 		</div>

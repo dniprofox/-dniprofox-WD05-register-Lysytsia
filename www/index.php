@@ -1,6 +1,7 @@
-<?php 
+ <?php 
 
 // Хост сайта
+ 
 define('HOST', 'http://' . $_SERVER['HTTP_HOST'] . '/');
 
 // Физический путь к корневой директории скрипта
@@ -8,6 +9,7 @@ define('ROOT', dirname(__FILE__).'/');
 
 $errors = array();
 $success = array();
+
 
 require ROOT . "config.php";
 require ROOT . "db.php";
@@ -72,7 +74,12 @@ switch ( $uri[0] ) {
 
 	case 'blog/post-new':
 		include ROOT . "modules/blog/post-new.php";
-		break;		
+		break;	
+
+
+	case 'blog/post':
+		include ROOT . "modules/blog/post.php";
+		break;			
 
 	
 	// 	echo "Blog page";
