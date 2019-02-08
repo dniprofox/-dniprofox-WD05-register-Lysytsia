@@ -1,10 +1,12 @@
-<!-- <?php 
+<h1>all posts.tpl</h1>
 
-// echo "<pre>";
-// print_r($posts);
-// echo "</pre>";
+ <?php 
 
- ?>  -->
+ echo "<pre>";
+ print_r($posts);
+ echo "</pre>";
+
+ ?>  
  
 
 

@@ -15,7 +15,7 @@ if ( isset($_POST['postNew'])) {
 	}
 
 	if ( empty($errors)) {
-		$post = R::dispense('post');	
+		$post = R::dispense('posts');	
 		$post->title = htmlentities($_POST['postTitle']); 
 		$post->text = $_POST['postText'];			
 		$post->authorId = $_SESSION['logged_user']['id'];

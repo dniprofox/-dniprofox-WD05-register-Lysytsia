@@ -1,12 +1,12 @@
-<!-- <h1>post-new.tpl</h1> -->
+<!--  <h1>post-new.tpl</h1>  -->
 
-<!-- <?php 
+<?php 
 
 echo "<pre>";
 print_r($_POST);
 echo "</pre>";
 
- ?> -->
+?> 
 
 <div class="container">
 		<div class="row">
