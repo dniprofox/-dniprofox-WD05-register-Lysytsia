@@ -6,10 +6,12 @@
 	<meta charset="UTF-8" />
 	<title>
 
-		<?php if ( @$title != '' ) {
+		<?php  if ( @$title != '' ) {
 			echo "$title - " . SITE_NAME ;
+
 		} else {
 			echo SITE_NAME;
+
 		} ?>
 		
 	</title>
@@ -23,6 +25,7 @@
 	<!-- endbuild -->
 	<!-- build:cssCustom css/main.css -->
 	<link rel="stylesheet" href="<?=HOST?>templates/assets/css/main.css" />
+	<link rel="stylesheet" href="<?=HOST?>templates/assets/css/tables.css" />
 	<link rel="stylesheet" href="<?=HOST?>templates/assets/css/custom.css" />
 	<!-- endbuild -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&amp;subset=cyrillic-ext" rel="stylesheet">

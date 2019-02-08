@@ -1,4 +1,4 @@
-<h1>all posts.tpl</h1>
+<h1>blog-all-posts.tpl</h1>
 
  <?php 
 
@@ -6,11 +6,11 @@
  print_r($posts);
  echo "</pre>";
 
- ?>  
- 
+ ?> 
 
 
-	<div class="main-wrapper">
+<div class="main-wrapper">
+	
 		<div class="container container--center">
 			<div class="row justify-content-between align-items-center pl-15 pr-15 pt-50">
 
