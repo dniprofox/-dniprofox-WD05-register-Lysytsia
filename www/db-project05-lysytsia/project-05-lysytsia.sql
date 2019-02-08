@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 04 2019 г., 23:09
+-- Время создания: Фев 08 2019 г., 12:04
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -50,7 +50,7 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email`, `role`, `password`, `name`, `secondname`, `city`, `country`, `avatar`, `avatar_small`, `recovery_code`, `recovery_code_times`) VALUES
 (1, 'dneprfox@gmail.com', 'user', '$2y$10$xDBxhbWYobfTebVo.v1N9.aBFL1AeSo/rOO8ABMR2csnWnX2wW2BG', 'Юрий', 'Ключевский', 'Киев', 'Украина', '59645485.jpg', '48-59645485.jpg', NULL, NULL),
 (3, 'autodnepr-us@mail.ru', 'user', '$2y$10$tyzAs1DR.19THl8U/w117.HsspwYscBFLK4yoRdGdQ0w4FENhxHfG', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL),
-(4, 'info@mail.com', 'admin', '$2y$10$K8Znw5SYvn99sl/ep43RZu8RKnYOeBDF1SCFUfje6pK4LzX0sHHGO', 'Дмитрий', 'Лисица', 'Днепр', 'Украина', '1123126081.jpg', '48-1123126081.jpg', 'SsBmQgZoCPANhVp', 0),
+(4, 'info@mail.com', 'admin', '$2y$10$K8Znw5SYvn99sl/ep43RZu8RKnYOeBDF1SCFUfje6pK4LzX0sHHGO', 'Дмитрий', 'Лисица', 'Днепр', 'Украина', '1153428221.jpg', '48-1153428221.jpg', 'SsBmQgZoCPANhVp', 0),
 (5, '5info@mail.com', 'user', '$2y$10$fjVUhPyyQl5aGFa4lHSXxu6nG9XmjIO86JwC9inifl9PPZ2hwSIF6', 'Семен', 'Горбунков', 'Оттава', 'Канада', '42982273.jpg', '48-42982273.jpg', NULL, NULL);
 
 --

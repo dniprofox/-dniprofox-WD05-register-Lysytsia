@@ -24,7 +24,7 @@
 
 						
 				</div>
-									
+								
 						<a class="button" href="<?=HOST?>blog/post?id=<?=$post->id?>">
 						Читать</a>
 

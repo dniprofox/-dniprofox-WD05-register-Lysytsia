@@ -1,4 +1,4 @@
- <?php 
+<?php 
 
 // Хост сайта
  
@@ -66,6 +66,27 @@ switch ( $uri[0] ) {
 		include ROOT . "modules/profile/edit.php";
 		break;
 
+
+// ************Blog*************
+
+	case 'blog/categories':
+		include ROOT . "modules/categories/all.php";
+		break;
+
+	case 'blog/category-new':
+		include ROOT . "modules/categories/new.php";
+		break;	
+
+	case 'blog/category-edit':
+		include ROOT . "modules/categories/edit.php";
+		break;
+
+	case 'blog/category-delete':
+		include ROOT . "modules/categories/delete.php";
+		break;
+	
+
+
 // ************Blog*************
 
 	case 'blog':
@@ -92,8 +113,6 @@ switch ( $uri[0] ) {
 		echo "Main page / 404";
 		break;
 }
-
-
 
 
 ?>

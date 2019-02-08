@@ -1,13 +1,13 @@
 	<h1>blog-post.tpl</h1>
 
-
+ 
 <!-- <?php 
 
 // echo "<pre>";
 // print_r($post);
 // echo "</pre>";
 
- ?> -->
+?> -->
 
 
 	<div class="container mt-70 mb-120">
@@ -27,8 +27,8 @@
 								<a href="#">Путешествия</a>
 						</span>
 						<span 
-								class="blog__date">
-								
+							class="blog__date">
+					 <?php echo rus_date("j F Y H:i", strtotime($post['date_time'])); ?> 
 						</span>
 
 						<span class="blog__comments">b
