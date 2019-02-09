@@ -1,4 +1,4 @@
-	<h1>blog-post.tpl</h1>
+<!-- 	<h1>blog-post.tpl</h1> -->
 
  
 <!-- <?php 

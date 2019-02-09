@@ -1,12 +1,12 @@
-<h1>blog-all-posts.tpl</h1>
+<!-- <h1>blog-all-posts.tpl</h1>
 
  <?php 
 
- echo "<pre>";
- print_r($posts);
- echo "</pre>";
+ // echo "<pre>";
+ // print_r($posts);
+ // echo "</pre>";
 
- ?> 
+ ?>  -->
 
 
 <div class="main-wrapper">

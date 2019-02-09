@@ -6,7 +6,7 @@ $title = "Блог-все записи";
 
 //выводим посты из БД в порядке убывания
 
-$posts = R::find('post', 'ORDER BY id DESC');
+$posts = R::find('posts', 'ORDER BY id DESC');
 
 // echo "<pre>";
 // print_r($posts);
