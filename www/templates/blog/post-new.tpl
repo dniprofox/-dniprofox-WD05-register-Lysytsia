@@ -50,9 +50,10 @@ echo "</pre>";
 						<label>
 							<div class="fieldset__title">Содержание</div>
 
-							<textarea name="postText" class="textarea height-200" rows="7" placeholder="Введите описание">
+							<textarea name="postText" class="textarea height-150" rows="7" placeholder="Введите описание">
 								
 							</textarea>
+							
 					</label>
 				</div>
 
