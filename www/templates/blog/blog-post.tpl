@@ -16,7 +16,7 @@
 				<div class="blog-full-post">
 
 					<div class="blog-full-post__button-edit">
-						<a class="button button--edit" href="#"> Редактировать</a>
+						<a class="button button--edit" href="#">Редактировать</a>
 					</div>
 
 					<h1 class="blog__heading"><?=$post['title']?></h1>
@@ -31,7 +31,7 @@
 					 <?php echo rus_date("j F Y H:i", strtotime($post['date_time'])); ?> 
 						</span>
 
-						<span class="blog__comments">b
+						<span class="blog__comments">
 							 <a href="#">2 комментария</a>
 						</span>
 

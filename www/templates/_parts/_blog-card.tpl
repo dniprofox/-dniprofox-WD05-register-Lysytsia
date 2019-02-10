@@ -13,7 +13,7 @@
 
 				<?php } else { ?>
 
-						<img class="card-post__img" src="<?=HOST?>usercontent/blog/no-image.jpg" alt="nophoto" />
+						<img class="card-post__img" src="<?=HOST?>usercontent/blog/blog-no-image.jpg" alt="nophoto" />
 
 				<?php } ?>	
 

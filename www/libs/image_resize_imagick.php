@@ -43,6 +43,7 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 function createThumbnailBig($imagePath, $cropWidth, $cropHeight){
 	
 	/* Чтение изображения */
+
 	$imagick = new Imagick($imagePath);
 	$width = $imagick->getImageWidth();
 	$height = $imagick->getImageHeight();

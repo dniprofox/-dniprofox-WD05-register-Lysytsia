@@ -15,14 +15,15 @@ if ( isset($_POST['postNew'])) {
 	}
 
 	if ( empty($errors)) {
-		$post = R::dispense('posts');	
-		$post->title = htmlentities($_POST['postTitle']); 
-		$post->text = $_POST['postText'];			
-		$post->authorId = $_SESSION['logged_user']['id'];
-		$post->dateTime = R::isoDateTime();
+			$post = R::dispense('posts');	
+			$post->title = htmlentities($_POST['postTitle']); 
+			$post->text = $_POST['postText'];			
+			$post->authorId = $_SESSION['logged_user']['id'];
+			$post->dateTime = R::isoDateTime();
 
-		if ( isset($_FILES["postImg"]["name"])
-		 && $_FILES["postImg"]["tmp_name"] != "" ) {
+		if ( isset($_FILES["postImg"]["name"])	
+				&& $_FILES["postImg"]["tmp_name"] != "" ) {		
+				 
 
 			$fileName = $_FILES["postImg"]["name"];
 			$fileTmpLoc = $_FILES["postImg"]["tmp_name"];
@@ -34,6 +35,7 @@ if ( isset($_POST['postNew'])) {
 
 ///////проверяем ф-лы на ширину и высоту
 			list($width, $height) = getimagesize($fileTmpLoc);
+
 			if($width < 10 || $height < 10){
 				$errors[] = ['title' => 'Изображение не имеет размеров. Загрузите изображение побольше.' ];
 			}
@@ -43,13 +45,15 @@ if ( isset($_POST['postNew'])) {
 			}
 
 			if ( !preg_match("/\.(gif|jpg|jpeg|png)$/i", $fileName) ) {
-				$errors[]  = [ 'title' => 'Неверный формат файла', 'desc' => '<p>Файл изображения должен быть в формате gif, jpg, jpeg, или png.</p>', ];
+	   	$errors[]  = [ 'title' => 'Неверный формат файла', 'desc' => '<p>Файл 
+	   	изображения должен быть в формате gif, jpg, jpeg, или png.</p>', ];
 			}
 
 			if ( $fileErrorMsg == 1 ) {
 				$errors[] = ['title' => 'При загрузке изображения произошла ошибка. Повторите попытку' ];
-			}
+			}		
 			
+
 			// Перемещаем загруженный файл в нужную директорию
 			$db_file_name = rand(100000000000,999999999999) . "." . $fileExt;
 			$postImgFolderLocation = ROOT . 'usercontent/blog/';
@@ -80,7 +84,6 @@ if ( isset($_POST['postNew'])) {
 
 
 		}
-
 
 		R::store($post);
 		header('Location: ' . HOST . "blog");
