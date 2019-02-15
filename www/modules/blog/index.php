@@ -1,21 +1,10 @@
 <?php 
 
-
-
-$title = "Блог-все записи";
-
-//выводим посты из БД в порядке убывания
+$title = "Блог - все записи";
 
 $posts = R::find('posts', 'ORDER BY id DESC');
 
-// echo "<pre>";
-// print_r($posts);
-// echo "</pre>";
-
-
-
 // Готовим контент для центральной части
-
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
 include ROOT . "templates/blog/blog-all-posts.tpl";

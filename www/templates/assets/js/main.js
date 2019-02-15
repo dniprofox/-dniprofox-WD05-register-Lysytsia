@@ -41,16 +41,22 @@ $(document).ready(function() {
 		.on( 'focus', function(){ $(this).addClass( 'has-focus' ); })
 		.on( 'blur', function(){ $(this).removeClass( 'has-focus' ); });
 
-	$('.comment-add__button').on('click', function(e){
+	// ----- обработка формм комментариев ----- //
+	
+	$('input[data-add-comment]').on('click', function(e){
 		e.preventDefault();
 		comment = $('.comment-add-block__text').children('.textarea');
 		if ( comment.val() == '' ) {
-			$('.error').fadeIn();
+			$('.error[data-error-comment-empty]').fadeIn();
 			comment.focus(function(event) {
-				$('.error').fadeOut();
+				$('.error[data-error-comment-empty]').fadeOut();
 			});
+		} else {
+			$('#commentForm').submit();
 		}
 	});
+
+
 	// ----- check login form ----- //
 	$('.button--enter').on('click', function(e){
 		e.preventDefault();
@@ -82,7 +88,6 @@ $(document).ready(function() {
 	});
 
 	// ----- check registration form ----- //
-	
 	$('.button--registration').on('click', function(e){
 		e.preventDefault();
 		input = $('.registration-page-form__row').children('input');
@@ -111,7 +116,6 @@ $(document).ready(function() {
 			// $('#registrationForm').unbind();
 			$('#registrationForm').submit();
 		}
-		
 	});
 
 	// ----- check lost password form ----- //
@@ -131,7 +135,6 @@ $(document).ready(function() {
 		}
 	});
 
-
 	// ----- check lost password form ----- //
 	$('.button--set-new-password').on('click', function(e){
 		e.preventDefault();
@@ -149,18 +152,12 @@ $(document).ready(function() {
 		}
 	});
 
-	setTimeout(function() {
-
+	setTimeout(function(){
 		$('[data-notify-hide]').slideUp(400);
-
 	}, 2000);
 
-	$('[data-notify-hide]').dblclick(function() {
+	$('[data-notify-hide]').dblclick(function(){
 		$(this).slideUp(400);
-		
 	});
-
-
-
 
 });

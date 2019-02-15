@@ -1,5 +1,4 @@
-/* bootstrap tables */
-
+/* Bootstrap tables */
 table {
 	border-collapse: collapse;
 }
@@ -298,6 +297,7 @@ table {
 .table-responsive>.table-bordered {
 	border: 0;
 }
+
 .table th {
 	text-align: left;
-}
+} 

@@ -1,15 +1,15 @@
 <?php 
 
 // Хост сайта
- 
+
 define('HOST', 'http://' . $_SERVER['HTTP_HOST'] . '/');
 
 // Физический путь к корневой директории скрипта
+
 define('ROOT', dirname(__FILE__).'/');
 
 $errors = array();
 $success = array();
-
 
 require ROOT . "config.php";
 require ROOT . "db.php";
@@ -28,10 +28,13 @@ $uri = filter_var($uri, FILTER_SANITIZE_URL);
 $uri = substr($uri, 1);
 $uri = explode('?', $uri);
 
+
 // print_r($uri);
 // echo "<br><br>";
 
+
 switch ( $uri[0] ) {
+	
 	case '':
 		require ROOT . "modules/main/index.php";
 		break;
@@ -66,28 +69,26 @@ switch ( $uri[0] ) {
 		include ROOT . "modules/profile/edit.php";
 		break;
 
-
-// ************categories*************
+	// ::::::::::::::::::: CATEGORIES :::::::::::::::::::
 
 	case 'blog/categories':
-		include ROOT . "modules/categories/all.php";
+		include "modules/categories/all.php";
 		break;
 
-	case 'blog/categories-new':
-		include ROOT . "modules/categories/new.php";
-		break;	
-
-	case 'blog/categories-edit':
-		include ROOT . "modules/categories/edit.php";
+	case 'blog/category-new':
+		include "modules/categories/new.php";
 		break;
 
-	case 'blog/categories-delete':
-		include ROOT . "modules/categories/delete.php";
+	case 'blog/category-edit':
+		include "modules/categories/edit.php";
 		break;
-	
 
 
-// ************Blog*************
+	case 'blog/category-delete':
+		include "modules/categories/delete.php";
+		break;
+
+	// ::::::::::::::::::: BLOG :::::::::::::::::::
 
 	case 'blog':
 		include ROOT . "modules/blog/index.php";
@@ -95,24 +96,45 @@ switch ( $uri[0] ) {
 
 	case 'blog/post-new':
 		include ROOT . "modules/blog/post-new.php";
-		break;	
+		break;
 
+	case 'blog/post-edit':
+		include ROOT . "modules/blog/post-edit.php";
+		break;
+
+	case 'blog/post-delete':
+		include ROOT . "modules/blog/post-delete.php";
+		break;
 
 	case 'blog/post':
 		include ROOT . "modules/blog/post.php";
-		break;			
+		break;
 
-	
-	// 	echo "Blog page";
-	// 	echo "<br>";
-	// 	echo "$uri[1]";
-	// 	// print_r($uri[1]);
-	// 	break;
+	// ::::::::::::::::::: CONTACTS :::::::::::::::::::
+
+
+	case 'contacts':
+		include "modules/contacts/index.php";
+		break;
+
+	case 'contacts-edit':
+		include "modules/contacts/edit.php";
+		break;
+
+	case 'messages':
+		include "modules/contacts/messages.php";
+		
+		break;
+
+
+	// ::::::::::::::::::: MAIN / OTHER :::::::::::::::::::
 	
 	default:
 		echo "Main page / 404";
 		break;
 }
+
+
 
 
 ?>

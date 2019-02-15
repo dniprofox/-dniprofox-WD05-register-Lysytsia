@@ -2,12 +2,7 @@
 
 $title = "Вход на сайт";
 
-
-if ( isset($_POST['email'])) {
-
-	 // print_r($_POST);
-  //  echo "<br><br>";
-
+if ( isset($_POST['login'])) {
 
 	if ( trim($_POST['email']) == '') {
 		$errors[] = ['title' => 'Введите Email' ];
@@ -25,15 +20,17 @@ if ( isset($_POST['email'])) {
 				$_SESSION['logged_user'] = $user;
 				$_SESSION['login'] = "1";
 				$_SESSION['role'] = $user->role;
+
+				if ( isset($_POST['rememberMe']) ) {
+					ini_set('session.gc_maxlifetime', 31104000); // 60*60*24*30*12 = 1 год
+					ini_set('session.cookie_lifetime', 31104000);
+				}
+
 				header("Location: " . HOST);
 				exit();
-
 			} else {
 				$errors[] = ['title' => 'Пароль введен неверно' ];
 			}
-		}  else {
-				$errors[] = ['title' => 'Введите верный email ' ];
-
 		}
 
 	}

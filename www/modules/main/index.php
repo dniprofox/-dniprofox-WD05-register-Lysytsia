@@ -2,9 +2,7 @@
 
 
 // Готовим контент для центральной части
-
 ob_start();
-
 include ROOT . "templates/_parts/_header.tpl";
 // include ROOT . "templates/main/main.tpl";
 $content = ob_get_contents();

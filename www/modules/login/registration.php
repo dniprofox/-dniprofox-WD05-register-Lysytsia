@@ -2,44 +2,33 @@
 
 $title = "Регистрация";
 
-
 // Если форма отправлена - то делаем регистрацию
-
-if ( isset($_POST['email'])) {
-
-		// echo "<pre>";
-		// print_r($_POST);
-		// echo "</pre>";
+if ( isset($_POST['register'])) {
 
 	if ( trim($_POST['email']) == '' ) {
-
 		$errors[] = ['title' => 'Введите Email', 'desc' => '<p>Email обязателен для регистрации на сайте</p>' ];
 	}
 
 	if ( trim($_POST['password']) == '') {
-
 		$errors[] = ['title' => 'Введите Пароль' ];
 	}
 
 
-
 	// Проверка что пользователь уже существует
-
 	if ( R::count('users', 'email = ?', array($_POST['email']) ) > 0 ) {
 		$errors[]  = [ 
-								'title' => 'Пользователь с там email уже зарегистрирован', 
-								'desc' => '<p>Используйте другой Email адрес, или воспользуйтесь восстановлением пароля.</p>', 
+						'title' => 'Пользователь с там email уже зарегистрирован', 
+						'desc' => '<p>Используйте другой Email адрес, или воспользуйтесь восстановлением пароля.</p>', 
 					];
 	}
 
 	if ( empty($errors) ) {
 		// Alright, Register!
-		
 		$user = R::dispense('users');
 		$user->email = htmlentities($_POST['email']);
 		$user->role = 'user';
 		$user->password = password_hash($_POST['password'], PASSWORD_DEFAULT);
-		R::store($user); //сохраняем пользователя в БД
+		R::store($user);
 
 		$_SESSION['logged_user'] = $user;
 		$_SESSION['login'] = "1";
@@ -53,13 +42,9 @@ if ( isset($_POST['email'])) {
 }
 
 // Готовим контент для центральной части
-
-ob_start();  //запись в буфер памяти
-
+ob_start();
 include ROOT . "templates/login/form-registration.tpl";
-
 $content = ob_get_contents();
-
 ob_end_clean();
 
 include ROOT . "templates/_parts/_head.tpl";

@@ -65,8 +65,7 @@ if ( !empty($_GET['email']) ) {
 	die;
 }
 
-// Готовим контент для центральной части.
-
+// Готовим контент для центральной части
 ob_start();
 include ROOT . "templates/login/form-set-new-password.tpl";
 $content = ob_get_contents();

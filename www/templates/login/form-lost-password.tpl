@@ -1,5 +1,4 @@
 <form id="lostForm" class="login-page-form" method="POST" action="<?=HOST?>lost-password">
-
 	<div class="login-page-form__header">Забыл пароль</div>
 
 	<?php 
@@ -25,9 +24,7 @@
 		</div>
 	</div>
 	<div class="login-page-form__footer">
-
 		<input name="lost-password" type="hidden" value="lost-password" />
 		<a class="button button--lost">Восстановить пароль</a>
-		
 	</div>
 </form>

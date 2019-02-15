@@ -1,29 +1,28 @@
-<!-- <?php 
+<?php 
+
 
 	// echo "<pre>";
 	// print_r($errors);
 	// echo "</pre>";
- ?> -->
-<?php
+
 
 	foreach ($errors as $error) {
+		if ( count($error) == 1) {  ?>
+			
+			<!-- Однострочная ошибка -->
+			
+			 <div class="error"><?=$error['title']?></div>
 
-		if ( count($error) == 1 ){ ?>
 
-	<div class="error mb-15">
-		<?=$error['title']?>
-	</div>
+<?php 	} else if ( count($error) == 2 ) { ?>
+			
+			<!-- Ошибка с описанием -->
+			<div class="error-with-desc"><?=$error['title']?></div>
+			<div class="error-with-desc-bottom">
+				<?=$error['desc']?>
+			</div>
 
-	<?php } else if ( count($error) == 2 ) { ?>
-
-	<div class="error-with-desc">
-		<?=$error['title']?>
-	</div>
-
-	<div class="error-with-desc-bottom">
-		<?=$error['desc']?>
-	</div>
-
-	<?php }
+<?php 
+		}
 	}
-?>
+ ?>

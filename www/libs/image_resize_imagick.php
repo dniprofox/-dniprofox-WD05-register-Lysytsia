@@ -2,11 +2,11 @@
 
 function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 
-
 	/* Чтение изображения */
 	$imagick = new Imagick($imagePath);
 	$width = $imagick->getImageWidth();
 	$height = $imagick->getImageHeight();
+	
 
 	// Изменение размера
 	if ( $width > $height ) {
@@ -43,7 +43,6 @@ function createThumbnail($imagePath, $cropWidth = 100, $cropHeight = 100){
 function createThumbnailBig($imagePath, $cropWidth, $cropHeight){
 	
 	/* Чтение изображения */
-
 	$imagick = new Imagick($imagePath);
 	$width = $imagick->getImageWidth();
 	$height = $imagick->getImageHeight();

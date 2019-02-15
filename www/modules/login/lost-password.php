@@ -12,9 +12,7 @@ if ( isset($_POST['lost-password'])) {
 
 		if ( $user ) {
 
-
 			// Генерация кода и сохранение кода в БД
-
 			function random_str( $num = 30 ) {
 				return substr(str_shuffle('0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'), 0, $num);
 			}
@@ -46,7 +44,7 @@ if ( isset($_POST['lost-password'])) {
 				];
 
 		} else {
-			$errors[] = ['title' => "Такой email не зарегистрирован" ];
+			$errors[] = ['title' => "Пользователь с таким email не зарегистрирован" ];
 		}
 
 	}

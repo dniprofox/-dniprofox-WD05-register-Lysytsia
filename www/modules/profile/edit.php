@@ -26,8 +26,7 @@ if ( isset($_POST['profile-update']) ) {
 		$user->city = htmlentities($_POST['city']);
 		$user->country = htmlentities($_POST['country']);
 
-		if ( isset($_FILES['avatar']['name']) 
-			&& $_FILES['avatar']['tmp_name'] != "" ) {
+		if ( isset($_FILES['avatar']['name']) && $_FILES['avatar']['tmp_name'] != "" ) {
 			
 			// Write file image params in variables
 			$fileName = $_FILES["avatar"]["name"];
@@ -40,41 +39,33 @@ if ( isset($_POST['profile-update']) ) {
 
 			// Check file propertties on different conditions
 			list($width, $height) = getimagesize($fileTmpLoc);
-
 			if ($width < 10 || $height < 10 ) {
 				$errors[] = ['title' => 'Изображение не имеет размеров. Загрузите изображение побольше.' ];
 			}
 
 			if ( $fileSize > 4194304 ) {
-				$errors[] = ['title' => 'Файл изображения не должен быть
-				 более 4 Mb' ];
+				$errors[] = ['title' => 'Файл изображения не должен быть более 4 Mb' ];
 			}
 
 			if ( !preg_match("/\.(gif|jpg|jpeg|png)$/i", $fileName) ) {
-				$errors[]  = [ 'title' => 'Неверный формат файла',
-											 'desc' => '<p>Файл изображения должен быть в формате 
-												gif, jpg, jpeg, или png.</p>', ];
+				$errors[]  = [ 'title' => 'Неверный формат файла', 'desc' => '<p>Файл изображения должен быть в формате gif, jpg, jpeg, или png.</p>', ];
 			}
 
 			if ( $fileErrorMsg == 1 ) {
 				$errors[] = ['title' => 'При загрузке изображения произошла ошибка. Повторите попытку' ];
 			}
 
-			// Проверям установлен ли аватар у пользователя
-
+			// Поверям установлен ли аватар у пользователя
 			$avatar = $user->avatar;
 			$avatarFolderLocation = ROOT . 'usercontent/avatar/';
 
 			// Если аватар уже установлен, то есть загружен ранее то удаляем файл аватара
 			if ( $avatar != "" ) {
 				$picurl = $avatarFolderLocation . $avatar;
-
 				// Удаляем аватар
 				// die($picurl); 
 			    if ( file_exists($picurl) ) { unlink($picurl); }
-
-					$picurl48 = $avatarFolderLocation . '48-' . $avatar;
-
+				$picurl48 = $avatarFolderLocation . '48-' . $avatar;
 			    if ( file_exists($picurl48) ) { unlink($picurl48); }
 			}
 
@@ -91,7 +82,6 @@ if ( isset($_POST['profile-update']) ) {
 
 			$target_file =  $avatarFolderLocation . $db_file_name;
 			// $resized_file = $avatarFolderLocation . $db_file_name;
-
 			$wmax = 222;
 			$hmax = 222;
 			$img = createThumbnail($target_file, $wmax, $hmax);
