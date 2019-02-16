@@ -114,17 +114,21 @@ switch ( $uri[0] ) {
 
 
 	case 'contacts':
-		include "modules/contacts/index.php";
+		include ROOT . "modules/contacts/index.php";
 		break;
 
 	case 'contacts-edit':
-		include "modules/contacts/edit.php";
+		include ROOT . "modules/contacts/edit.php";
 		break;
 
 	case 'messages':
-		include "modules/contacts/messages.php";
+		include  ROOT . "modules/contacts/messages.php";
 		
 		break;
+
+	case 'messages-delete':
+		include ROOT . "modules/contacts/messages-delete.php";
+		break;	
 
 
 	// ::::::::::::::::::: MAIN / OTHER :::::::::::::::::::

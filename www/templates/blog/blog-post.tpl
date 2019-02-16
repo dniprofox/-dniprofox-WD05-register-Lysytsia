@@ -1,13 +1,19 @@
 <div class="container mt-70 mb-120">
+
 	<div class="row justify-content-center">
 		<div class="col-md-10">
 			<div class="blog-full-post">
 
 				<?php if ( isAdmin() ) {  ?>
+
 				<div class="blog-full-post__button-edit">
+					
 					<a class="button button--edit" href="<?=HOST?>blog/post-edit?id=<?=$post['id']?>">Редактировать</a>
+
 					<a class="button button--del" href="<?=HOST?>blog/post-delete?id=<?=$post['id']?>">Удалить</a>
+
 				</div>
+
 				<?php } ?>
 
 				<?php if ( isAdmin() ) {

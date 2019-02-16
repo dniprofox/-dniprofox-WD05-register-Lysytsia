@@ -1,5 +1,7 @@
 <div class="container">
+
 	<div class="row">
+
 		<div class="col-xl-10 offset-1">
 			<div class="title-1 m-0 pt-60">Удалить пост</div>
 
@@ -11,6 +13,7 @@
 							<?=$post['title']?>
 						</strong> с id =
 						<?=$post['id']?> ?</p>
+						
 				</div>
 
 				<div class="row">
