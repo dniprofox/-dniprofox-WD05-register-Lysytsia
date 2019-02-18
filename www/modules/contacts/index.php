@@ -14,6 +14,16 @@ if ( isset($_POST['newMessage'])) {
 		$errors[] = ['title' => 'Введите Email' ];
 	}
 
+	if ( trim($_POST['name']) == '') {
+		$errors[] = ['title' => 'Введите Ваше имя' ];
+	}
+
+	if ( trim($_POST['message']) == '') {
+		$errors[] = ['title' => 'Сообщение не может быть пустым' ];
+	}
+
+
+
 if ( empty($errors)) {
 
 		$message = R::dispense('messages');

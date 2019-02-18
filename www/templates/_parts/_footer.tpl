@@ -2,9 +2,13 @@
 	<div class="container">
 		<div class="footer__flex-wrap">
 			<div class="footer__copyright">
-				<p>Team02</p>
-				<p>Создано c <i class="fas fa-heart"> </i> в
-					<a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2017 году</p>
+				<p>Проект Дмитрия Лисицы ©</p>
+
+				<p>Создано в <!-- <i class="fas fa-heart"> </i> --> 
+					
+					<a class="link-bold" href="http://webcademy.ru/">WebCademy.ru</a> в 2019 
+
+				году</p>
 			</div>
 			<div class="footer-nav">
 				<ul class="footer__nav-list">

@@ -6,10 +6,13 @@
 			<?=$message->date_time?>
 
 		</div>
+
 		<div class="user-message__button">				
 
+						
 				<a class="button button--del" 
-				href="<?=HOST?>messages-delete?id=<?=$messages['id']?>">Удалить</a>
+				href="<?=HOST?>message-delete?id=<?=$messages['id']?>">Удалить</a>
+
 				
 
 				

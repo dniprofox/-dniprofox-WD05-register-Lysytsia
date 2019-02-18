@@ -114,24 +114,43 @@ switch ( $uri[0] ) {
 
 
 	case 'contacts':
-		include ROOT . "modules/contacts/index.php";
+		include "modules/contacts/index.php";
 		break;
 
 	case 'contacts-edit':
-		include ROOT . "modules/contacts/edit.php";
+		include  "modules/contacts/edit.php";
 		break;
 
 	case 'messages':
-		include  ROOT . "modules/contacts/messages.php";
+		include  "modules/contacts/messages.php";
 		
 		break;
 
 	case 'messages-delete':
-		include ROOT . "modules/contacts/messages-delete.php";
+		include "modules/contacts/message-delete.php";
 		break;	
 
+		
+// ::::::::::::::::::: MAIN / OTHER :::::::::::::::::::
+
+	case 'about':
+		include "modules/about/index.php";
+		break;
+
+	case 'edit-text':
+		include "modules/about/edit-text.php";
+		break;
+
+	case 'edit-skills':
+		include "modules/about/edit-skills.php";
+		break;
+
+	case 'edit-jobs':
+		include "modules/about/edit-jobs.php";
+		break;
 
 	// ::::::::::::::::::: MAIN / OTHER :::::::::::::::::::
+
 	
 	default:
 		echo "Main page / 404";
