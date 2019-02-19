@@ -31,7 +31,7 @@ if ( isset($_POST['postNew'])) {
 
 		if ( isset($_FILES["postImg"]["name"]) && $_FILES["postImg"]["tmp_name"] != "" ) {
 			
-			// Write file image params in variables
+			// записываем параметры изображения в переменные
 			$fileName = $_FILES["postImg"]["name"];
 			$fileTmpLoc = $_FILES["postImg"]["tmp_name"];
 			$fileType = $_FILES["postImg"]["type"];
@@ -45,7 +45,12 @@ if ( isset($_POST['postNew'])) {
 			list($width, $height) = getimagesize($fileTmpLoc);
 
 			if ( !preg_match("/\.(gif|jpg|jpeg|png)$/i", $fileName) ) {
-				$errors[]  = [ 'title' => 'Неверный формат файла', 'desc' => '<p>Файл изображения должен быть в формате gif, jpg, jpeg, или png.</p>', ];
+				$errors[]  = [ 'title' => 'Неверный формат файла', 'desc' => '<p>Файл изображения должен быть в формате gif, jpg, jpeg, или png.</p>'];
+
+				if ( $fileErrorMsg == 1 ) {
+				$errors[] = ['title' => 'При загрузке изображения произошла ошибка. Повторите попытку' ];
+				}
+
 			}	
 
 
@@ -59,9 +64,7 @@ if ( isset($_POST['postNew'])) {
 
 			
 
-			if ( $fileErrorMsg == 1 ) {
-				$errors[] = ['title' => 'При загрузке изображения произошла ошибка. Повторите попытку' ];
-			}
+			
 
 
 

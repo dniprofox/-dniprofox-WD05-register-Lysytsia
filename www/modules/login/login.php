@@ -11,6 +11,7 @@ if ( isset($_POST['login'])) {
 	if ( trim($_POST['password']) == '') {
 		$errors[] = ['title' => 'Введите Пароль' ];
 	}
+   
 
 	if ( empty($errors)) {
 		$user = R::findOne('users', 'email = ?', array($_POST['email']) );
@@ -28,6 +29,7 @@ if ( isset($_POST['login'])) {
 
 				header("Location: " . HOST);
 				exit();
+				
 			} else {
 				$errors[] = ['title' => 'Пароль введен неверно' ];
 			}

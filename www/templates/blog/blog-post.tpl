@@ -53,10 +53,45 @@
 
 				<div class="user-content">
 					<?=$post['text']?>
-				</div>
+				</div>	
+
+
+
 				<div class="flex-container-button mt-30">
-					<a class="button " href="#"><i class="fas fa-arrow-left icon-style icon-style--back"></i>Назад</a>
-					<a class="button" href="#">Вперед<i class="fas fa-arrow-right icon-style"></i></a>
+
+					<?php  if ($prevId != ''): ?>
+
+					<div class="buttonWrap">
+						
+							<a class="button " href="<?=HOST?>blog/post?id=<?=$prevId?>">
+
+							<i class="fas fa-arrow-left icon-style icon-style--back"></i>					Назад						
+									
+							</a>
+
+					</div>
+
+					<?php else: ?>
+
+						<div></div>
+
+					<?php endif ?>
+
+					<?php  if ($nextId != ''): ?>
+		
+					<div class="buttonWrap">
+
+							<a class="button" href="<?=HOST?>blog/post?id=<?=$nextId?>">
+							Вперед
+							<i class="fas fa-arrow-right icon-style"></i>						
+					
+							</a>
+
+					</div>
+
+					<?php endif ?>
+					
+
 				</div>
 
 			
