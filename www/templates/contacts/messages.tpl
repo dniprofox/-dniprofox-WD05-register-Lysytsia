@@ -1,5 +1,11 @@
 <div class="container">
 
+	<?php if ( isset($_GET['result']))  {
+
+			include ROOT . "templates/contacts/_result.tpl";
+
+	  }  ?>
+
 	<div class="row">
 
 		<div class="col-xl-10 offset-1 pb-50">
@@ -19,3 +25,5 @@
 		</div>
 	</div>
 </div>
+
+

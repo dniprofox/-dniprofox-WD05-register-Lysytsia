@@ -3,6 +3,7 @@
 	<div class="container container--center pt-50">
 
 		<?php if ( isset($_GET['result'])) {
+		
 			include ROOT . "templates/blog/_results.tpl";
 
 		} ?>

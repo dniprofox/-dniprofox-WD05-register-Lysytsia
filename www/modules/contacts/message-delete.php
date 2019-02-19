@@ -1,25 +1,26 @@
 <?php
 
-if (!isAdmin()) {	
+if ( !isAdmin() ) {	
 	header("Location: " . HOST);
-	die;
+	die();
 }
 
 $title = "Удалить сообщение";
 
 $message = R::load('messages', $_GET['id']);
 
-if(isset($_POST['messageDelete'])){
+if(isset($_POST['messagesDeleted'])){
 
-	$fileFolderLocation = ROOT.'usercontent/message/';
+	$fileFolderLocation = ROOT.'usercontent/messages/';
 	
-	$file = $message->message_file;
+	$file = $messages->message_file;
 	if ( $file != "") {
 		$picurl = $fileFolderLocation . $file;
 		if ( file_exists($picurl) ) {unlink($picurl);}
 	}
-	R::trash($message);
-	header('Location:' . HOST . "messages?result=messageDeleted");
+
+	R::trash($messages);
+	header('Location:' . HOST . "contacts?result=messagesDeleted");
 	exit();
 }
 
@@ -27,7 +28,7 @@ if(isset($_POST['messageDelete'])){
 // Готовим контент для центральной части
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/blog/post-delete.tpl";
+include ROOT . "templates/contacts/messages-delete.php";
 $content = ob_get_contents();
 ob_end_clean();
 
