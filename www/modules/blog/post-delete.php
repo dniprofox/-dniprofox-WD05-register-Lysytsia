@@ -13,6 +13,7 @@ if ( isset($_POST['postDelete']) ) {
 
 	$postImgFolderLocation = ROOT . 'usercontent/blog/';
 	$postImg = $post->post_img;
+	
 	if ( $postImg != "" ) {
 		$picurl = $postImgFolderLocation . $postImg;
 		

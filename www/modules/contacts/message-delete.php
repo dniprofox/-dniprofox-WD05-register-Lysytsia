@@ -9,17 +9,19 @@ $title = "Удалить сообщение";
 
 $message = R::load('messages', $_GET['id']);
 
+
 if(isset($_POST['messagesDeleted'])){
 
-	$fileFolderLocation = ROOT.'usercontent/messages/';
+	$fileFolderLocation = ROOT.'usercontent/upload_files/';
 	
 	$file = $messages->message_file;
+
 	if ( $file != "") {
 		$picurl = $fileFolderLocation . $file;
 		if ( file_exists($picurl) ) {unlink($picurl);}
 	}
 
-	R::trash($messages);
+	R::trash($message);
 	header('Location:' . HOST . "contacts?result=messagesDeleted");
 	exit();
 }
@@ -28,7 +30,7 @@ if(isset($_POST['messagesDeleted'])){
 // Готовим контент для центральной части
 ob_start();
 include ROOT . "templates/_parts/_header.tpl";
-include ROOT . "templates/contacts/messages-delete.php";
+include ROOT . "templates/contacts/messages-delete.tpl";
 $content = ob_get_contents();
 ob_end_clean();
 

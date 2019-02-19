@@ -25,7 +25,7 @@
 				<div class="row">
 					<div class="col-md-auto pr-10">
 
-						<input type="submit" name="messagesDelete" class="button button--del" value="Удалить">
+						<input type="submit" name="messagesDeleted" class="button button--del" value="Удалить">
 
 					</div>
 					<div class="col-md-auto pl-10">

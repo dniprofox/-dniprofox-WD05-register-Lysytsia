@@ -22,11 +22,12 @@ session_start();
 
 ............................................. */
 
-$uri =  $_SERVER["REQUEST_URI"];
-$uri = rtrim($uri, "/"); 
-$uri = filter_var($uri, FILTER_SANITIZE_URL);
-$uri = substr($uri, 1);
-$uri = explode('?', $uri);
+$uri =  $_SERVER["REQUEST_URI"];//получаем URL,указанный в адресной строке
+$uri = rtrim($uri, "/"); // обрезаем / с конца
+$uri = filter_var($uri, FILTER_SANITIZE_URL);//очищаем от нежел. элементов
+$uri = substr($uri, 1);  // вырезаем первый символ /
+$uri = explode('?', $uri); // разбиваем строку.превращая ее в массив с элементом
+ //до ? и после ?
 
 
 // print_r($uri);

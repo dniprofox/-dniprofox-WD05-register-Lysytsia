@@ -12,9 +12,8 @@
 						
 				<a class="button button--del" 
 
-				href="<?=HOST?>messages-delete>">Удалить</a>
-
-				<!-- href="<?=HOST?>contacts/messages-delete?id=<?=$messages['id']?>">Удалить</a> -->	
+				
+				href="<?=HOST?>contacts/messages-delete?id=<?=$messages['id']?>">Удалить</a>	
 
 
 		</div>
