@@ -127,7 +127,7 @@ switch ( $uri[0] ) {
 		
 		break;
 
-	case 'messages-delete':
+	case 'message-delete':
 		include "modules/contacts/message-delete.php";
 		break;	
 
