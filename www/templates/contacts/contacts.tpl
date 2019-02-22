@@ -130,11 +130,7 @@
 						<input name="email" class="input mb-10" placeholder="Email" />
 
 						<textarea name="message" class="textarea" rows="5" 
-						placeholder="Сообщение">
-							
-
-						</textarea>
-
+						placeholder="Сообщение"></textarea>	
 
 						<div class="fieldset__title mt-20">Прикрепить файл</div>
 						<div class="comment-row">jpg, png, pdf, doc, весом до 2Мб.</div>

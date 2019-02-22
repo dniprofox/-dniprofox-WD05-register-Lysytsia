@@ -5,8 +5,8 @@
 		<div class="col-xl-10 offset-1">
 			<div class="title-1 m-0 pt-60">Удалить сообщение</div>
 
-			<form action="<?=HOST?>contacts/messages-delete?id=<?=$messages['id']?>"
-			 method="POST" class="form mb-100 pb-20 pt-35">
+			<form action="<?=HOST?>message-delete?id=<?=$message['id']?>"	
+					 method="POST" class="form mb-100 pb-20 pt-35">
 
 				<div class="fieldset">
 
@@ -21,7 +21,9 @@
 
 					</div>
 					<div class="col-md-auto pl-10">
-						<a class="button" href="<?=HOST?>contacts/messages">Отмена</a>
+						<a class="button" href="<?=HOST?>messages">
+								Отмена
+						</a>
 					</div>
 				</div>
 

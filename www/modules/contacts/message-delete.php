@@ -14,7 +14,7 @@ if(isset($_POST['messagesDeleted'])){
 
 	$fileFolderLocation = ROOT.'usercontent/upload_files/';
 	
-	$file = $messages->message_file;
+	$file = $message->message_file;
 
 	if ( $file != "") {
 		$picurl = $fileFolderLocation . $file;

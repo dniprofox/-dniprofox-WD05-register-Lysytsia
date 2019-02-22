@@ -1,4 +1,5 @@
 <form id="registrationForm" class="registration-page-form" method="POST" action="<?=HOST?>registration">
+
 	<div class="registration-page-form__header">Регистрация</div>
 
 
@@ -18,12 +19,16 @@
 		<div class="error-with-desc">Данный email уже занят</div>
 		<div class="error-with-desc-bottom">
 			<div class="error-with-desc-text">
-				<div class="p">Используйте другой email, чтобы создать новый аккаун </div>
+				<div class="p">Используйте другой email, чтобы создать новый аккаунт</div>
+
 				<div class="p mt-15">Или воспользуйтесь
-					<a class="error-with-desc__link" href="#">восстановлением пароля</a> , чтобы войти на сайт.</div>
+					<a class="error-with-desc__link" href="#">восстановлением пароля</a> , чтобы войти на сайт.
+				</div>
+
 			</div>
 		</div>
 	</div>
+	
 	<div class="registration-page-form__row">
 		<input name="email" class="input" type="email" placeholder="E-mail" value="info@mail.com" />
 	</div>

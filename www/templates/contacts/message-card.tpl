@@ -11,9 +11,9 @@
 
 						
 				<a class="button button--del" 
-
 				
-				href="<?=HOST?>contacts/messages-delete?id=<?=$messages['id']?>">Удалить</a>	
+					href="<?=HOST?>message-delete?id=<?=$message['id']?>">Удалить
+				</a>	
 
 
 		</div>
@@ -32,7 +32,7 @@
 		<?php } ?>
 
 				<a class="user-message__email user-message__a"
-				 href="mailto:<?=$message->email?>">
+				 		href="mailto:<?=$message->email?>">
 					<?=$message->email?>
 				</a>
 
