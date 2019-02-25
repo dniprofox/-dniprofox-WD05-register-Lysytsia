@@ -2,6 +2,12 @@
 	<div class="row">
 		<div class="col-xl-10 offset-1">
 
+			<?php if ( isset($_GET['result']) ) {
+
+			include ROOT . "templates/about/_results.tpl";
+			
+			} ?>
+
 			<div class="title-3">Опыт работы</div>
 
 			<?php foreach ($jobs as $job) { ?>
@@ -34,10 +40,7 @@
 					<div class="fieldset__title">Описание работы, должностные обязанности, достигнутые результаты
 					</div>
 
-						<textarea name="description" class="textarea mb-20" rows="5" placeholder="Напишите интересное краткое содержательное описание">
-							<?=@$_POST['description']?>
-							
-						</textarea>
+						<textarea name="description" class="textarea mb-20" rows="5" placeholder="Напишите интересное краткое содержательное описание"><?=@$_POST['description']?></textarea>						
 
 					<input type="submit" name="newJob" class="button button--save" value="Добавить">
 

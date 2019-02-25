@@ -9,6 +9,11 @@ if ( isset($_POST['register'])) {
 		$errors[] = ['title' => 'Введите Email', 'desc' => '<p>Email обязателен для регистрации на сайте</p>' ];
 	}
 
+	//////превярем email на корректность/////////
+	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    $errors[] = ['title' => 'Введите корректный Email' ];
+}
+
 	if ( trim($_POST['password']) == '') {
 		$errors[] = ['title' => 'Введите Пароль' ];
 	}

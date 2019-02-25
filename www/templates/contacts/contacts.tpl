@@ -125,7 +125,7 @@
 					<form class="form" action="<?=HOST?>contacts" method="POST" 
 							enctype="multipart/form-data"	>
 
-						<input name="name" class="input mb-10" placeholder="Введите имя" />
+						<input name="name" class="input mb-10 mt-10"  placeholder="Введите имя" />
 
 						<input name="email" class="input mb-10" placeholder="Email" />
 

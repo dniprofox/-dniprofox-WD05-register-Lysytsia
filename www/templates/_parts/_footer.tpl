@@ -19,7 +19,7 @@
 						<a href="<?=HOST?>about">Обо мне</a>
 					</li>
 					<li class="footer__nav-item">
-						<a href="<?=HOST?>portfolio">Работы</a>
+						<a href="#">Работы</a>
 					</li>
 					<li class="footer__nav-item">
 						<a href="<?=HOST?>blog">Блог</a>

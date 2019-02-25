@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Фев 22 2019 г., 17:59
+-- Время создания: Фев 25 2019 г., 21:04
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -66,7 +66,6 @@ INSERT INTO `categories` (`id`, `cat_title`) VALUES
 (12, 'Работа'),
 (13, 'Туризм'),
 (14, 'Спорт'),
-(15, 'Дайвинг'),
 (16, 'Охота'),
 (25, 'Музыка');
 
@@ -120,7 +119,7 @@ CREATE TABLE `contacts` (
 --
 
 INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `name`, `secondname`, `skype`, `vk`, `fb`, `github`, `twitter`) VALUES
-(1, 'dneprfox@gmail.com', 380508583678, 'Днепр,Украина', 'Дмитрий', 'Лисица', '1', '2', '3', '4', '5');
+(1, 'dneprfox@gmail.com', 380508583678, 'Днепр,Украина', 'Дмитрий', 'Лисица', 'Dmitry Fox', 'https://vk.com/id494926983', 'https://www.facebook.com/dneprfox', 'https://github.com/dniprofox', '@Dniproucrop');
 
 -- --------------------------------------------------------
 
@@ -140,7 +139,12 @@ CREATE TABLE `jobs` (
 --
 
 INSERT INTO `jobs` (`id`, `period`, `title`, `description`) VALUES
-(2, '17.02.2019', 'Menager', 'test2														\r\n						');
+(2, '17.02.2019', 'Menager', 'test2														\r\n						'),
+(3, '123', 'должность', 'описание'),
+(4, '123', 'должность', 'описание'),
+(5, '123', 'должность', 'описание'),
+(6, '123', 'должность', 'описание'),
+(7, '123', 'должность', 'описание');
 
 -- --------------------------------------------------------
 
@@ -196,7 +200,8 @@ INSERT INTO `posts` (`id`, `title`, `text`, `author_id`, `date_time`, `post_img`
 (34, 'Инженеры Audi и Porsche пришли в шок после разборки Tesla Model 3', '<p>В этом году Tesla Model 3 выйдет на европейский рынок. Разумеется, только если все пойдет по плану, что совсем необязательно в случае расписания Илона Маска. Тем не менее, европейские компании готовятся встречать амбициозную заокеанскую новинку. Что это значит?</p>\r\n', 4, '2019-02-12 16:02:57', '623051816.jpg', '320-623051816.jpg', '6', NULL),
 (36, 'Манчестер Юнайтед сыграет с ПСЖ, а Порту приедет в Рим - анонс матчей Лиги чемпионов', '<p>12 февраля стартует решающая часть Лиги чемпионов. В турнире осталось 16 команд, которые решат между собой, кто сыграет в майском финале в Мадриде. Слабых уже нет, и в каждом матче присутствует интрига. &quot;Вести&quot; разобрали все восемь пар плей-офф Лиги чемпионов и взвесили все &ldquo;за&rdquo; и &ldquo;против&rdquo; успеха каждого из претендентов на трофей.</p>\r\n', 4, '2019-02-12 16:14:02', '-384449875.jpeg', '320--384449875.jpeg', '14', '2019-02-12 16:14:42'),
 (37, 'В Африке выпал снег! Слонов и жирафов, бродящих по сугробам, вы еще не видели', '<p>В Южно-Африканской Республике, в природном заповеднике Sneeuberg Nature Reserve, выпал снег. В соцсетях появились фотографии жирафов и слонов, идущих на фоне деревьев, покрытых толстым слоем снега. Об этом в воскресенье, 9 сентября, сообщило сообщество Cyclone Of Rhodes в Facebook.</p>\r\n', 4, '2019-02-12 16:16:50', '973928067.jpg', '320-973928067.jpg', '1', NULL),
-(38, 'Доминикана не падает в цене, но спросом всё равно пользуется', '<p>Минимальная стоимость пакетного тура с прямым перелётом в Доминикану по состоянию на понедельник 4 февраля начинается от 70500 гривен на двоих (причём даже не на февраль, а с вылетом в начале марта). Стоимость туров на ближайшие даты ощутимо выше, но при этом рейсы закрываются хорошо: судя по онлайн-монитору Anex Tour, основная часть мест на вылеты 13 и 23 февраля уже продана.&nbsp;</p>\r\n', 4, '2019-02-12 16:19:35', '-675136943.jpg', '320--675136943.jpg', '13', NULL);
+(38, 'Доминикана не падает в цене, но спросом всё равно пользуется', '<p>Минимальная стоимость пакетного тура с прямым перелётом в Доминикану по состоянию на понедельник 4 февраля начинается от 70500 гривен на двоих (причём даже не на февраль, а с вылетом в начале марта). Стоимость туров на ближайшие даты ощутимо выше, но при этом рейсы закрываются хорошо: судя по онлайн-монитору Anex Tour, основная часть мест на вылеты 13 и 23 февраля уже продана.&nbsp;</p>\r\n', 4, '2019-02-12 16:19:35', '-675136943.jpg', '320--675136943.jpg', '13', NULL),
+(40, 'дайвинг', '<p>пост дайвинг</p>\r\n', 4, '2019-02-25 11:12:08', NULL, NULL, '26', NULL);
 
 -- --------------------------------------------------------
 
@@ -253,7 +258,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `email`, `role`, `password`, `name`, `secondname`, `city`, `country`, `avatar`, `avatar_small`, `recovery_code`, `recovery_code_times`) VALUES
 (1, 'dneprfox@gmail.com', 'user', '$2y$10$xDBxhbWYobfTebVo.v1N9.aBFL1AeSo/rOO8ABMR2csnWnX2wW2BG', 'Михаил', 'Светлов', 'Киев', 'Украина', '171840494.jpeg', '48-171840494.jpeg', NULL, NULL),
 (4, 'info@mail.com', 'admin', '$2y$10$K8Znw5SYvn99sl/ep43RZu8RKnYOeBDF1SCFUfje6pK4LzX0sHHGO', 'Дмитрий', 'Лисица', 'Днепр', 'Украина', '-256184651.jpg', '48--256184651.jpg', 'SsBmQgZoCPANhVp', 0),
-(5, '5info@mail.com', 'user', '$2y$10$fjVUhPyyQl5aGFa4lHSXxu6nG9XmjIO86JwC9inifl9PPZ2hwSIF6', 'Семен', 'Горбунков', 'Оттава', 'Канада', '42982273.jpg', '48-42982273.jpg', NULL, NULL);
+(5, '5info@mail.com', 'user', '$2y$10$fjVUhPyyQl5aGFa4lHSXxu6nG9XmjIO86JwC9inifl9PPZ2hwSIF6', 'Семен', 'Горбунков', 'Оттава', 'Канада', '42982273.jpg', '48-42982273.jpg', NULL, NULL),
+(6, 'info', 'user', '$2y$10$R8GLAZS04I5qUagw7J0Zt.6/iq6zUhByKbrCCmvr7QD8xq1WOEMu6', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
 --
 -- Индексы сохранённых таблиц
@@ -330,7 +336,7 @@ ALTER TABLE `about`
 -- AUTO_INCREMENT для таблицы `categories`
 --
 ALTER TABLE `categories`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT для таблицы `comments`
@@ -348,19 +354,19 @@ ALTER TABLE `contacts`
 -- AUTO_INCREMENT для таблицы `jobs`
 --
 ALTER TABLE `jobs`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT для таблицы `messages`
 --
 ALTER TABLE `messages`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT для таблицы `skills`
@@ -372,7 +378,7 @@ ALTER TABLE `skills`
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

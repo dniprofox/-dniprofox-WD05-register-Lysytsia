@@ -47,10 +47,8 @@
 				<div class="fieldset__title">Информация на главной</div>
 
 				<textarea id="ckEditor" name="description" class="textarea" rows="5" placeholder="Введите текст сообщения">
-
-					<?php dataFromPost('description'); ?>
-
-				</textarea>
+					<?php dataFromPost('description'); ?></textarea>
+				
 
 				<?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>
 

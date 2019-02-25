@@ -2,11 +2,17 @@
 
 $title = "Вход на сайт";
 
+ $val = "/[a-zA-Z0-9_-.+]+@[a-zA-Z0-9-]+.[a-zA-Z]+/";
+
 if ( isset($_POST['login'])) {
 
 	if ( trim($_POST['email']) == '') {
 		$errors[] = ['title' => 'Введите Email' ];
 	}
+//////превярем email на корректность/////////
+	if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
+    $errors[] = ['title' => 'Введите корректный Email' ];
+}
 
 	if ( trim($_POST['password']) == '') {
 		$errors[] = ['title' => 'Введите Пароль' ];

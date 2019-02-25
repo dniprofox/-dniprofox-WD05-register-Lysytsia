@@ -23,9 +23,9 @@ session_start();
 ............................................. */
 
 $uri =  $_SERVER["REQUEST_URI"];//получаем URL,указанный в адресной строке
-$uri = rtrim($uri, "/"); // обрезаем / с конца
+$uri = rtrim($uri, "/"); // обрезаем / с  конца строки
 $uri = filter_var($uri, FILTER_SANITIZE_URL);//очищаем от нежел. элементов
-$uri = substr($uri, 1);  // вырезаем первый символ /
+$uri = substr($uri, 1);  // вырезаем первый символ: */*
 $uri = explode('?', $uri); // разбиваем строку.превращая ее в массив с элементом
  //до ? и после ?
 
@@ -132,7 +132,7 @@ switch ( $uri[0] ) {
 		break;	
 
 		
-// ::::::::::::::::::: MAIN / OTHER :::::::::::::::::::
+// ::::::::::::::::::: about :::::::::::::::::::
 
 	case 'about':
 		include "modules/about/index.php";
@@ -149,6 +149,10 @@ switch ( $uri[0] ) {
 	case 'edit-jobs':
 		include "modules/about/edit-jobs.php";
 		break;
+
+	case 'jobs-delete':
+		include "modules/about/jobs-delete.php";
+		break;	
 
 	// ::::::::::::::::::: MAIN / OTHER :::::::::::::::::::
 

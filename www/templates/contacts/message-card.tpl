@@ -12,7 +12,7 @@
 						
 				<a class="button button--del" 
 				
-					href="<?=HOST?>message-delete?id=<?=$message['id']?>">Удалить
+				 href="<?=HOST?>message-delete?id=<?=$message['id']?>">Удалить
 				</a>	
 
 

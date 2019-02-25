@@ -5,7 +5,8 @@
 		<div class="user-message__button">
 
 			<a class="button button--del button--small" 
-				href="<?=HOST?>messages-delete">Удалить</a>
+
+					href="<?=HOST?>jobs-delete?>">Удалить</a>
 
 		</div>
 

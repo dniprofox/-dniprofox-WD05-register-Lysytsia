@@ -8,7 +8,7 @@ define('DB_USER', 'root');
 define('DB_PASS', '');
 
 // SITE SETTINGS FOR EMAILS
-define('SITE_NAME', 'личный сайт Юрия Ключевского');
+define('SITE_NAME', 'личный сайт Дмитрия Лисицы');
 define('SITE_EMAIL', 'info@webdev03.com');
 define('ADMIN_EMAIL', 'info@rightblog.ru');
 
