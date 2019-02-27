@@ -6,7 +6,8 @@
 
 			<a class="button button--del button--small" 
 
-					href="<?=HOST?>jobs-delete?>">Удалить</a>
+					href="<?=HOST?>jobs-delete?id=<?=$job->id?>">Удалить
+			</a>
 
 		</div>
 

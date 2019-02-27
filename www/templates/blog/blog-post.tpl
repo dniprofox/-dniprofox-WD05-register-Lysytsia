@@ -27,11 +27,17 @@
 						<?=$post['name']?>
 							<?=$post['secondname']?>
 					</span>
+
+					<?php if (@$post['cat_title'] != ''): ?>						
+
 					<span class="blog__travel">
 						<a href="#">
-							<?=$post['cat_title']?>
+							<?=@$post['cat_title']?>
 						</a>
 					</span>
+
+				<?php endif ?>
+
 					<span class="blog__date">
 						<? echo rus_date("j F Y H:i", strtotime($post['date_time']) ); ?>
 					</span>
