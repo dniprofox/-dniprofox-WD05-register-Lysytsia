@@ -15,7 +15,7 @@
 				<?=$comment['secondname']?>
 				</div>
 			<div class="user-date"><i class="far fa-clock"></i>
-				<span class="user-date--dat">
+				<span class="user-date--dat"> 
 				<?=$comment['date_time']?>
 				</span>
 			</div>

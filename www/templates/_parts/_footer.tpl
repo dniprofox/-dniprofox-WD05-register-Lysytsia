@@ -30,11 +30,11 @@
 				</ul>
 			</div>
 			<div class="footer__icons">
-				<a href="#"><i class="fab fa-vk"></i></a>
-				<a href="#"><i class="fab fa-twitter"></i></a>
-				<a href="#"><i class="fab fa-youtube"></i></a>
-				<a href="#"><i class="fab fa-instagram"></i></a>
-				<a href="#"><i class="fab fa-facebook"></i></a>
+				<a href="https://vk.com/id494926983"><i class="fab fa-vk"></i></a>
+				<a href="https://www.facebook.com/FoxWeb056/?modal=admin_todo_tour"><i class="fab fa-twitter"></i></a>
+				<a href="https://www.facebook.com/FoxWeb056/?modal=admin_todo_tour"><i class="fab fa-youtube"></i></a>
+				<a href="https://www.facebook.com/FoxWeb056/?modal=admin_todo_tour"><i class="fab fa-instagram"></i></a>
+				<a href="https://www.facebook.com/FoxWeb056/?modal=admin_todo_tour"><i class="fab fa-facebook"></i></a>
 			</div>
 		</div>
 	</div>

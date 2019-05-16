@@ -37,22 +37,12 @@
 <div class="container">
 	<div class="row justify-content-center">
 		<div class="col-md-10">
-			<div class="title-2 color">Комментарии пользователя</div>
+			<!-- <div class="title-2 color">Комментарии пользователя</div> -->
 			<div class="profile-comments mb-100">
 				<div class="user-comment">
-					<div class="user-comment-wrap">
-						<div class="comment-wrap">
-							<div class="user-name">
-								<a href="#">Поездка в LA</a>
-							</div>
-							<div class="user-date"><i class="far fa-clock"></i>
-								<span class="user-date--dat">05 Мая 2017 года в 15:45</span>
-							</div>
-						</div>
-						<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
-					</div>
+				
 				</div>
-				<div class="user-comment">
+				<!-- <div class="user-comment">
 					<div class="user-comment-wrap">
 						<div class="comment-wrap">
 							<div class="user-name">
@@ -64,20 +54,8 @@
 						</div>
 						<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
 					</div>
-				</div>
-				<div class="user-comment">
-					<div class="user-comment-wrap">
-						<div class="comment-wrap">
-							<div class="user-name">
-								<a href="#">Настройка Sublime</a>
-							</div>
-							<div class="user-date"><i class="far fa-clock"></i>
-								<span class="user-date--dat">12 Мая 2017 года в 20:39</span>
-							</div>
-						</div>
-						<p class="user-text">Замечательный парк, обязательно отправлюсь туда этим летом.</p>
-					</div>
-				</div>
+				</div> -->
+				
 			</div>
 		</div>
 	</div>

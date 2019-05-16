@@ -1,4 +1,5 @@
-<form id="registrationForm" class="registration-page-form" method="POST" action="<?=HOST?>registration">
+<form id="registrationForm" class="registration-page-form" 
+			method="POST" action="<?=HOST?>registration">
 
 	<div class="registration-page-form__header">Регистрация</div>
 
